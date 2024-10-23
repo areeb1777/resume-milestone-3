@@ -1,20 +1,22 @@
 "use strict";
 // Form and resume container elements
-const form = document.getElementById('resume-form');
-const resumeContainer = document.getElementById('resume');
-form.addEventListener('submit', (e) => {
+const form = document.getElementById("resume-form");
+const resumeContainer = document.getElementById("resume");
+form.addEventListener("submit", (e) => {
     var _a;
     e.preventDefault();
     // Collect form values
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const contact = document.getElementById('contact').value;
-    const degree = document.getElementById('degree').value;
-    const institution = document.getElementById('institution').value;
-    const gradYear = document.getElementById('gradYear').value;
-    const skills = document.getElementById('skills').value.split(',');
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const contact = document.getElementById("contact")
+        .value;
+    const degree = document.getElementById("degree").value;
+    const institution = document.getElementById("institution").value;
+    const gradYear = document.getElementById("gradYear")
+        .value;
+    const skills = document.getElementById("skills").value.split(",");
     // Handle profile picture
-    const profilePicInput = document.getElementById('profilePic');
+    const profilePicInput = document.getElementById("profilePic");
     const profilePicFile = (_a = profilePicInput.files) === null || _a === void 0 ? void 0 : _a[0];
     if (profilePicFile) {
         const reader = new FileReader();
@@ -40,6 +42,8 @@ form.addEventListener('submit', (e) => {
           <ul>${skills.map((skill) => `<li>${skill.trim()}</li>`).join("")}</ul>
         </div>
       `;
+            // Display the resume
+            resumeContainer.style.display = "block";
         };
         // Read the profile picture file as a Data URL
         reader.readAsDataURL(profilePicFile);
@@ -62,5 +66,7 @@ form.addEventListener('submit', (e) => {
         <ul>${skills.map((skill) => `<li>${skill.trim()}</li>`).join("")}</ul>
       </div>
     `;
+        // Display the resume
+        resumeContainer.style.display = "block";
     }
 });
