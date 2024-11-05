@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,7 +11,6 @@
     href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap"
     rel="stylesheet" />
 </head>
-
 <body>
   <form id="resume-form">
     <h2> <i class="fa-regular fa-user"></i> Personal Information</h2>
@@ -27,6 +25,8 @@
 
     <label for="profilePic">Profile Picture:</label>
     <input type="file" id="profilePic" name="profilePic" accept="image/*" />
+
+    <img id="profilePreview" alt="Profile Preview" />
 
     <h2> <i class="fa-solid fa-graduation-cap"></i> Education</h2>
     <label for="degree">Degree:</label>
@@ -50,5 +50,4 @@
 
   <script type="module" src="./dist/script.js"></script>
 </body>
-
 </html>
